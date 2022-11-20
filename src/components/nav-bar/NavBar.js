@@ -10,8 +10,9 @@ import { CartSideMenu } from "../cart-side-menu/CartSideMenu";
 export const NavBar = () => {
   const products = useSelector((state) => state.products);
   const headerRef = React.createRef();
-  const [opacity, setOpacity] = useState(0);
   const [windowSize, setWindowSize] = useState(getWindowSize());
+  const [opacity, setOpacity] = useState(1);
+  // const [opacity, setOpacity] = useState(windowSize.innerWidth > 600 ? 1 : 0);
   useEffect(() => {
     function handleWindowResize() {
       setWindowSize(getWindowSize());
