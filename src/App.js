@@ -14,7 +14,7 @@ function App() {
       <div className="backGroundImage" />
       <div style={{ marginBottom: "78px" }} />
       <Routes>
-        <Route path="/" element={<Shop />} />
+        <Route path={["/", "/ghpagesShop/"]} element={<Shop />} />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/home" element={<Home />} />
         <Route path="/cart" element={<Cart />} />
