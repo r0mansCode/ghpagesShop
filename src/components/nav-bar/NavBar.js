@@ -56,7 +56,7 @@ export const NavBar = () => {
         <NavLink style={{ color: opacity < 0.5 && "white" }} to="/home">
           Par Mums
         </NavLink>
-        <NavLink style={{ color: opacity < 0.5 && "white" }} to="/">
+        <NavLink style={{ color: opacity < 0.5 && "white" }} to="/shop">
           Veikals
         </NavLink>
         <NavLink style={{ color: opacity < 0.5 && "white" }} to="/contacts">

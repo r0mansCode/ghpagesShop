@@ -9,7 +9,7 @@ export const Footer = () => {
         <NavLink className="footerLink" to="/home">
           Par Mums
         </NavLink>
-        <NavLink className="footerLink" to="/">
+        <NavLink className="footerLink" to="/shop">
           Veikals
         </NavLink>
         <NavLink className="footerLink" to="/contacts">
