@@ -11,3 +11,11 @@
   background-image: url("./assets/images/cocktailsHorizontal.png");
   background-position: 50% 30%;
 }
+
+@media only screen and (max-width: 600px) {
+  .backGroundImage {
+    height: 250px;
+    background-size: contain;
+    background-position: 50% 100%;
+  }
+}

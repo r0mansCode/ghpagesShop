@@ -17,7 +17,7 @@ export const Footer = () => {
         </NavLink>
       </div>
       <div className="footerSubContainer">
-        <div>Seko mums:::</div>
+        <div>Seko mums</div>
         <FaFacebookF className="footerIcon" />
         <FaInstagram className="footerIcon" />
         <FaYoutube className="footerIcon" />

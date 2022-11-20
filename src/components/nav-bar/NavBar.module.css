@@ -51,7 +51,6 @@ a:hover {
 
 .subContainerSecond {
   display: flex;
-  gap: 24px;
   align-items: center;
   gap: 24px;
 }
@@ -118,4 +117,14 @@ button:hover {
   /* translate: 0 10px; */
   right: 0;
   z-index: 100;
+}
+
+@media only screen and (max-width: 600px) {
+  .cartIconContainer:hover .navBarCartContainer {
+    display: none;
+  }
+
+  .container {
+    padding: 12px;
+  }
 }

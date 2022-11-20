@@ -39,3 +39,17 @@
   justify-content: center;
   gap: 14px;
 }
+
+@media only screen and (max-width: 600px) {
+  .footerContainer {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footerIcon {
+    border-radius: 50%;
+    font-size: 18px;
+    background-color: #222326;
+    padding: 10px;
+  }
+}

@@ -34,3 +34,22 @@
 /* .informationList > li {
   list-style-position: inside;
 } */
+
+@media only screen and (max-width: 600px) {
+  .compositionPicture {
+    display: none;
+  }
+  .homeContainer {
+    /* background-color: white;
+  border-radius: 8px; */
+    width: 100%;
+    margin: 0 0 24px;
+    padding: 32px 18px;
+    /* display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+  box-sizing: border-box; */
+  }
+}

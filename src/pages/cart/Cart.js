@@ -46,41 +46,43 @@ export const Cart = () => {
                   />
                   <div className="cartItemName">{item.name}</div>
                 </section>
-                <section>
-                  <div className="quantitySelectorRow">
-                    <div
-                      className="addRemove"
-                      onClick={() => dispatch(itemRemoved(item.id))}
-                    >
-                      -
+                <div className="cartItemSecondSection">
+                  <section>
+                    <div className="quantitySelectorRow">
+                      <div
+                        className="addRemove"
+                        onClick={() => dispatch(itemRemoved(item.id))}
+                      >
+                        -
+                      </div>
+                      {countItems(products, item.id)}
+                      <div
+                        className="addRemove"
+                        onClick={() =>
+                          dispatch(
+                            itemAdded({
+                              id: item.id,
+                              image: item.image,
+                              name: item.name,
+                              price: item.price,
+                            })
+                          )
+                        }
+                      >
+                        +
+                      </div>
                     </div>
-                    {countItems(products, item.id)}
-                    <div
-                      className="addRemove"
-                      onClick={() =>
-                        dispatch(
-                          itemAdded({
-                            id: item.id,
-                            image: item.image,
-                            name: item.name,
-                            price: item.price,
-                          })
-                        )
-                      }
-                    >
-                      +
+                  </section>
+                  <section className="thirdSection">
+                    <div className="cartItemPriceNumber">
+                      €{countItems(products, item.id) * item.price}
                     </div>
-                  </div>
-                </section>
-                <section className="thirdSection">
-                  <div className="cartItemPriceNumber">
-                    €{countItems(products, item.id) * item.price}
-                  </div>
-                </section>
-                <FaTimes
-                  onClick={() => dispatch(allItemsRemoved(item.id))}
-                  className="removeAllButton"
-                />
+                  </section>
+                  <FaTimes
+                    onClick={() => dispatch(allItemsRemoved(item.id))}
+                    className="removeAllButton"
+                  />
+                </div>
               </div>
             );
           })}
