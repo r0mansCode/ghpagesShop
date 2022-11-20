@@ -11,13 +11,32 @@ export const NavBar = () => {
   const products = useSelector((state) => state.products);
   const headerRef = React.createRef();
   const [opacity, setOpacity] = useState(0);
+  const [windowSize, setWindowSize] = useState(getWindowSize());
+  useEffect(() => {
+    function handleWindowResize() {
+      setWindowSize(getWindowSize());
+    }
+
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
+  function getWindowSize() {
+    const { innerWidth, innerHeight } = window;
+    return { innerWidth, innerHeight };
+  }
   useEffect(() => {
     const headerHeight = headerRef.current.clientHeight;
     const range = 100;
     const offset = headerHeight * 2;
 
     const didScrollPage = (e) => {
-      let calc = 0 + (window.scrollY - offset + range) / range;
+      let calc =
+        windowSize.innerWidth > 600
+          ? 0 + (window.scrollY - offset + range) / range
+          : 1;
 
       if (calc > 1) {
         calc = 1;
