@@ -1,4 +1,6 @@
 .footerContainer {
+  position: absolute;
+  bottom: 0;
   box-sizing: border-box;
   display: flex;
   padding: 24px 48px;
