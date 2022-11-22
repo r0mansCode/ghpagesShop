@@ -70,6 +70,10 @@ export const NavBar = () => {
     setCartIsOpen(false);
   };
 
+  const handleCartOpen = (newValue) => {
+    windowSize.innerWidth > 600 && setCartIsOpen(true);
+  };
+
   return (
     <div
       className={classes.container}
@@ -93,7 +97,7 @@ export const NavBar = () => {
       <div className={classes.subContainerSecond}>
         <div
           className={classes.cartIconContainer}
-          onMouseOver={() => setCartIsOpen(true)}
+          onMouseOver={() => handleCartOpen()}
           onMouseOut={() => setCartIsOpen(false)}
         >
           <NavLink to="/cart">
