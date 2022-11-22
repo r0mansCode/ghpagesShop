@@ -11,8 +11,12 @@ export const NavBar = () => {
   const products = useSelector((state) => state.products);
   const headerRef = React.createRef();
   const [windowSize, setWindowSize] = useState(getWindowSize());
-  const [opacity, setOpacity] = useState(1);
+  const [cartIsOpen, setCartIsOpen] = useState(false);
+  const [opacity, setOpacity] = useState(
+    getWindowSize().innerWidth < 600 ? 1 : 0
+  );
   // const [opacity, setOpacity] = useState(windowSize.innerWidth > 600 ? 1 : 0);
+  console.log(getWindowSize().innerWidth);
   useEffect(() => {
     function handleWindowResize() {
       setWindowSize(getWindowSize());
@@ -62,6 +66,10 @@ export const NavBar = () => {
     return arrFilt;
   };
 
+  const handleCartClose = (newValue) => {
+    setCartIsOpen(false);
+  };
+
   return (
     <div
       className={classes.container}
@@ -70,7 +78,6 @@ export const NavBar = () => {
         backgroundColor: `rgba(255, 255, 255, ${opacity})`,
         boxShadow: opacity < 0.5 && "none",
       }}
-      // style={{ opacity: opacity, backgroundColor: "rgba(255, 255, 255, 1)" }}
     >
       <div className={classes.subContainer}>
         <NavLink style={{ color: opacity < 0.5 && "white" }} to="/home">
@@ -84,20 +91,26 @@ export const NavBar = () => {
         </NavLink>
       </div>
       <div className={classes.subContainerSecond}>
-        {/* <div className="subContainer subContainer--second"> */}
-        <div className={classes.cartIconContainer}>
+        <div
+          className={classes.cartIconContainer}
+          onMouseOver={() => setCartIsOpen(true)}
+          onMouseOut={() => setCartIsOpen(false)}
+        >
           <NavLink to="/cart">
             <AiOutlineShopping className={classes.cartIcon} />
             {products?.length > 0 && (
               <div className={classes.productCount}>{products.length}</div>
             )}
           </NavLink>
-          <div className={classes.navBarCartContainer}>
-            <CartSideMenu
-              filteredCart={removeDuplicatesArray()}
-              cart={products}
-            />
-          </div>
+          {cartIsOpen && (
+            <div className={classes.navBarCartContainer}>
+              <CartSideMenu
+                filteredCart={removeDuplicatesArray()}
+                cart={products}
+                handleCartClose={() => handleCartClose()}
+              />
+            </div>
+          )}
         </div>
         <img
           className={classes.languageSelector}

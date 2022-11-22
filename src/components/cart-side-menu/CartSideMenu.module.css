@@ -23,6 +23,19 @@
   translate: 79px -20px;
 }
 
+.quantitySelectorRow {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.itemCount {
+  margin-bottom: 2px;
+}
+
 .cartTitle {
   width: 100%;
   text-align: left;
@@ -77,6 +90,16 @@
 
 .totalAmmount {
   position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
   bottom: 20px;
-  right: 28px;
+  right: 0;
+  padding-inline: 28px;
+}
+
+.addRemove {
+  font-size: 16px;
+  cursor: pointer;
 }

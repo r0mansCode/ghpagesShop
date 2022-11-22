@@ -107,28 +107,23 @@ button:hover {
   background-color: rgb(10, 139, 10);
 }
 
-.cartIconContainer:hover .navBarCartContainer {
+/* .cartIconContainer:hover .navBarCartContainer {
   display: flex;
   justify-content: flex-end;
-}
+} */
 
 .navBarCartContainer {
-  display: none;
+  /* display: none; */
+  display: flex;
+  justify-content: flex-end;
   position: fixed;
   right: 0;
   top: 58px;
   width: 100%;
   height: 100%;
-  backdrop-filter: blur(10px);
-  /* z-index: 100; */
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
 }
-
-/* .navBarCartContainer {
-  display: none;
-  position: absolute;
-  right: 0;
-  z-index: 100;
-}  */
 
 @media only screen and (max-width: 600px) {
   .cartIconContainer:hover .navBarCartContainer {
