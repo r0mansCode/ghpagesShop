@@ -1,5 +1,5 @@
 import React from "react";
-import "./Cart.css";
+import cn from "./Cart.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import {
   itemAdded,
@@ -7,6 +7,7 @@ import {
   allItemsRemoved,
 } from "../../features/counter/counterSlice";
 import { FaTimes } from "react-icons/fa";
+import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 
 export const Cart = () => {
   const products = useSelector((state) => state.products);
@@ -31,33 +32,33 @@ export const Cart = () => {
   };
 
   return (
-    <div className="cartContainer">
-      <div className="cartTitle">Iepirkuma Grozs</div>
-      <div className="cartSubcontainer">
-        <div className="cartItemListContainer">
+    <div className={cn.cartContainer}>
+      <div className={cn.cartTitle}>Mani Pasūtījumi</div>
+      <div className={cn.cartSubcontainer}>
+        <div className={cn.cartItemListContainer}>
           {removeDuplicatesArray().map((item) => {
             return (
-              <div className="cartItem">
-                <section className="cartItemFirstSection">
+              <div className={cn.cartItem}>
+                <section className={cn.cartItemFirstSection}>
                   <img
                     src={item.image}
-                    className="cartItemImage"
+                    className={cn.cartItemImage}
                     alt="Shopping Item"
                   />
-                  <div className="cartItemName">{item.name}</div>
+                  <div className={cn.cartItemName}>{item.name}</div>
                 </section>
-                <div className="cartItemSecondSection">
+                <div className={cn.cartItemSecondSection}>
                   <section>
-                    <div className="quantitySelectorRow">
+                    <div className={cn.quantitySelectorRow}>
                       <div
-                        className="addRemove"
+                        className={cn.addRemove}
                         onClick={() => dispatch(itemRemoved(item.id))}
                       >
-                        -
+                        <AiOutlineMinus className={cn.changeCount} />
                       </div>
-                      {countItems(products, item.id)}
+                      <div>{countItems(products, item.id)}</div>
                       <div
-                        className="addRemove"
+                        className={cn.addRemove}
                         onClick={() =>
                           dispatch(
                             itemAdded({
@@ -69,37 +70,37 @@ export const Cart = () => {
                           )
                         }
                       >
-                        +
+                        <AiOutlinePlus className={cn.changeCount} />
                       </div>
                     </div>
                   </section>
-                  <section className="thirdSection">
-                    <div className="cartItemPriceNumber">
+                  <section className={cn.thirdSection}>
+                    <div className={cn.cartItemPriceNumber}>
                       €{countItems(products, item.id) * item.price}
                     </div>
                   </section>
                   <FaTimes
                     onClick={() => dispatch(allItemsRemoved(item.id))}
-                    className="removeAllButton"
+                    className={cn.removeAllButton}
                   />
                 </div>
               </div>
             );
           })}
         </div>
-        <div className="cartTotalAmmount">
-          <div className="cartTotalAmmountTitle">Kopā apmaksai</div>
-          <div className="cartTotalAmmountSubContainer">
+        <div className={cn.cartTotalAmmount}>
+          <div className={cn.cartTotalAmmountTitle}>Kopā apmaksai</div>
+          <div className={cn.cartTotalAmmountSubContainer}>
             <div>
               <div>Pamatsumma:</div>
               <div>€{totalPrice()}</div>
             </div>
-            <div className="totalPrice">
+            <div className={cn.totalPrice}>
               <div>Kopējā summa:</div>
               <div>€{totalPrice()}</div>
             </div>
           </div>
-          <div className="payButton">Apmaksāt</div>
+          <div className={cn.payButton}>Apmaksāt</div>
         </div>
       </div>
     </div>
