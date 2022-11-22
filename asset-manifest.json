@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ghpagesShop/static/css/main.32d1cdf2.css",
-    "main.js": "/ghpagesShop/static/js/main.8c65ece5.js",
+    "main.css": "/ghpagesShop/static/css/main.741ac58d.css",
+    "main.js": "/ghpagesShop/static/js/main.5db11f42.js",
     "static/js/787.d6e19c64.chunk.js": "/ghpagesShop/static/js/787.d6e19c64.chunk.js",
     "static/media/cocktailsHorizontal.png": "/ghpagesShop/static/media/cocktailsHorizontal.fe10bcd3c8d1b5e8daf8.png",
     "static/media/composition2.jpg": "/ghpagesShop/static/media/composition2.45d429ae228ddc537501.jpg",
@@ -9,12 +9,12 @@
     "static/media/bottledCocktail.jpg": "/ghpagesShop/static/media/bottledCocktail.1424be64bbd0461df211.jpg",
     "static/media/pornstar.jpg": "/ghpagesShop/static/media/pornstar.2f3783112c3d8e2914fe.jpg",
     "index.html": "/ghpagesShop/index.html",
-    "main.32d1cdf2.css.map": "/ghpagesShop/static/css/main.32d1cdf2.css.map",
-    "main.8c65ece5.js.map": "/ghpagesShop/static/js/main.8c65ece5.js.map",
+    "main.741ac58d.css.map": "/ghpagesShop/static/css/main.741ac58d.css.map",
+    "main.5db11f42.js.map": "/ghpagesShop/static/js/main.5db11f42.js.map",
     "787.d6e19c64.chunk.js.map": "/ghpagesShop/static/js/787.d6e19c64.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.32d1cdf2.css",
-    "static/js/main.8c65ece5.js"
+    "static/css/main.741ac58d.css",
+    "static/js/main.5db11f42.js"
   ]
 }
