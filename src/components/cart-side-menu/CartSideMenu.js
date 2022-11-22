@@ -1,6 +1,7 @@
 import cn from "./CartSideMenu.module.css";
 import { useDispatch } from "react-redux";
 import { itemAdded, itemRemoved } from "../../features/counter/counterSlice";
+import { FaTimes } from "react-icons/fa";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
 
@@ -21,7 +22,13 @@ export const CartSideMenu = ({ cart, filteredCart, handleCartClose }) => {
 
   return (
     <div className={cn.cartSideMenuContainer}>
-      <div className={cn.cartTitle}>Iepirkuma Grozs</div>
+      <div className={cn.titleRow}>
+        <div className={cn.cartTitle}>Iepirkuma Grozs</div>
+        <FaTimes
+          style={{ cursor: "pointer" }}
+          onClick={() => handleCartClose()}
+        />
+      </div>
       <div className={cn.cartSideMenuItemListContainer}>
         {filteredCart.map((item) => {
           return (
