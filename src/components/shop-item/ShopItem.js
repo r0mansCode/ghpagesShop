@@ -1,6 +1,7 @@
 import React from "react";
 import "./ShopItem.css";
 import { useDispatch } from "react-redux";
+import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import { itemAdded, itemRemoved } from "../../features/counter/counterSlice";
 
 export const ShopItem = ({ image, name, price, id, basket }) => {
@@ -44,7 +45,7 @@ export const ShopItem = ({ image, name, price, id, basket }) => {
                   className="addRemove"
                   onClick={() => dispatch(itemRemoved(id))}
                 >
-                  -
+                  <AiOutlineMinus />
                 </div>
                 <div>{countItems(basket)}</div>
                 <div
@@ -60,7 +61,7 @@ export const ShopItem = ({ image, name, price, id, basket }) => {
                     )
                   }
                 >
-                  +
+                  <AiOutlinePlus />
                 </div>
               </div>
             </div>
