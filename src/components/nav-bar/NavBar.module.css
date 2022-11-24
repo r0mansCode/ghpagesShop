@@ -134,3 +134,7 @@ button:hover {
     padding: 12px;
   }
 }
+
+.mockLogo {
+  width: 15px;
+}

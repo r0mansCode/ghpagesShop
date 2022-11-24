@@ -10,9 +10,23 @@
   align-items: flex-start;
   gap: 8px;
   box-sizing: border-box;
+  /* font-family: "DM Sans"; */
 }
 
 .homeDescription {
+  text-align: left;
+}
+
+.mockLogo {
+  width: 40px;
+  height: 90px;
+}
+
+.homeTitle {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 22px;
+  width: 100%;
   text-align: left;
 }
 
@@ -21,10 +35,6 @@
   flex-direction: row;
   gap: 24px;
   justify-content: space-between;
-}
-
-.compositionPicture {
-  width: 500px;
 }
 
 .informationList {
@@ -52,4 +62,23 @@
   gap: 8px;
   box-sizing: border-box; */
   }
+}
+
+.bulletpointSection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bulletpointRow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: start;
+  gap: 8px;
+}
+
+.animatedBulletPoints {
+  color: rgb(10, 139, 10);
+  font-size: 20px;
 }

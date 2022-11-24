@@ -6,6 +6,7 @@ import { AiOutlineShopping } from "react-icons/ai";
 import classes from "./NavBar.module.css";
 import { useSelector } from "react-redux";
 import { CartSideMenu } from "../cart-side-menu/CartSideMenu";
+import mockLogo from "../../assets/images/cupPicture.png";
 
 export const NavBar = () => {
   const products = useSelector((state) => state.products);
@@ -15,8 +16,6 @@ export const NavBar = () => {
   const [opacity, setOpacity] = useState(
     getWindowSize().innerWidth < 600 ? 1 : 0
   );
-  // const [opacity, setOpacity] = useState(windowSize.innerWidth > 600 ? 1 : 0);
-  console.log(getWindowSize().innerWidth);
   useEffect(() => {
     function handleWindowResize() {
       setWindowSize(getWindowSize());
@@ -84,6 +83,9 @@ export const NavBar = () => {
       }}
     >
       <div className={classes.subContainer}>
+        <NavLink to="/home">
+          <img src={mockLogo} className={classes.mockLogo} />
+        </NavLink>
         <NavLink style={{ color: opacity < 0.5 && "white" }} to="/home">
           Par Mums
         </NavLink>
