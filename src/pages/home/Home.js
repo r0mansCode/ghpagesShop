@@ -53,8 +53,11 @@ export const Home = () => {
           Rīgā pasūtījumiem virs €40
         </div>
         <div className="bulletpointRow">
-          <GiOrange className="animatedBulletPoints" /> Rūpīgi pagatavotie un
-          pārbaudītie produkti
+          <GiOrange
+            style={{ fontSize: "18px" }}
+            className="animatedBulletPoints"
+          />{" "}
+          Rūpīgi pagatavotie un pārbaudītie produkti
         </div>
         <div className="bulletpointRow">
           <GiPresent className="animatedBulletPoints" /> Ja vēlies individuāli
