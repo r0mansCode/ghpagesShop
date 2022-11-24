@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/ghpagesShop/static/css/main.ab62a7b8.css",
-    "main.js": "/ghpagesShop/static/js/main.09a2f331.js",
+    "main.css": "/ghpagesShop/static/css/main.735bc02a.css",
+    "main.js": "/ghpagesShop/static/js/main.59887a2e.js",
     "static/js/787.d6e19c64.chunk.js": "/ghpagesShop/static/js/787.d6e19c64.chunk.js",
     "static/media/cocktailsHorizontal.png": "/ghpagesShop/static/media/cocktailsHorizontal.fe10bcd3c8d1b5e8daf8.png",
-    "static/media/composition2.jpg": "/ghpagesShop/static/media/composition2.45d429ae228ddc537501.jpg",
     "static/media/oranges.jpg": "/ghpagesShop/static/media/oranges.5a1a6ca63a6fae5504ad.jpg",
+    "static/media/DMSans-Regular.ttf": "/ghpagesShop/static/media/DMSans-Regular.067ebd7ed3c947d82dc4.ttf",
+    "static/media/cupPicture.png": "/ghpagesShop/static/media/cupPicture.0928da141feddebe6a13.png",
     "static/media/bottledCocktail.jpg": "/ghpagesShop/static/media/bottledCocktail.1424be64bbd0461df211.jpg",
     "static/media/pornstar.jpg": "/ghpagesShop/static/media/pornstar.2f3783112c3d8e2914fe.jpg",
     "index.html": "/ghpagesShop/index.html",
-    "main.ab62a7b8.css.map": "/ghpagesShop/static/css/main.ab62a7b8.css.map",
-    "main.09a2f331.js.map": "/ghpagesShop/static/js/main.09a2f331.js.map",
+    "main.735bc02a.css.map": "/ghpagesShop/static/css/main.735bc02a.css.map",
+    "main.59887a2e.js.map": "/ghpagesShop/static/js/main.59887a2e.js.map",
     "787.d6e19c64.chunk.js.map": "/ghpagesShop/static/js/787.d6e19c64.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ab62a7b8.css",
-    "static/js/main.09a2f331.js"
+    "static/css/main.735bc02a.css",
+    "static/js/main.59887a2e.js"
   ]
 }
