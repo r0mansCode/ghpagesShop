@@ -1,5 +1,6 @@
 import React from "react";
 import cn from "./Cart.module.css";
+import { NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
   itemAdded,
@@ -88,21 +89,31 @@ export const Cart = () => {
             );
           })}
         </div>
-        <div className={cn.cartTotalAmmount}>
-          <div className={cn.cartTotalAmmountTitle}>Kopā apmaksai</div>
-          <div className={cn.cartTotalAmmountSubContainer}>
-            <div>
-              <div>Pamatsumma:</div>
-              <div>€{totalPrice()}</div>
+        {products?.length > 0 && (
+          <div className={cn.cartTotalAmmount}>
+            <div className={cn.cartTotalAmmountTitle}>Kopā apmaksai</div>
+            <div className={cn.cartTotalAmmountSubContainer}>
+              <div>
+                <div>Pamatsumma:</div>
+                <div>€{totalPrice()}</div>
+              </div>
+              <div className={cn.totalPrice}>
+                <div>Kopējā summa:</div>
+                <div>€{totalPrice()}</div>
+              </div>
             </div>
-            <div className={cn.totalPrice}>
-              <div>Kopējā summa:</div>
-              <div>€{totalPrice()}</div>
-            </div>
+            <div className={cn.payButton}>Apmaksāt</div>
           </div>
-          <div className={cn.payButton}>Apmaksāt</div>
-        </div>
+        )}
       </div>
+      {products?.length < 1 && (
+        <div className={cn.emptyCart}>
+          Šobrīd iepirkumu grozs ir tukšs.
+          <NavLink to="/shop">
+            <div className={cn.directToShopButton}>Turpināt iepirkties</div>
+          </NavLink>
+        </div>
+      )}
     </div>
   );
 };

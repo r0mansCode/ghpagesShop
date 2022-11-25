@@ -18,10 +18,17 @@
   background-position: 50% 30%;
 }
 
-@media only screen and (max-width: 600px) {
+.appGap {
+  margin-bottom: 78px;
+}
+
+@media only screen and (max-width: 800px) {
   .backGroundImage {
     height: 250px;
     background-size: contain;
     background-position: 50% 100%;
+  }
+  .appGap {
+    margin-bottom: 0px;
   }
 }

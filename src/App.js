@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <NavBar />
       <div className="backGroundImage" />
-      <div style={{ marginBottom: "78px" }} />
+      <div className="appGap" />
       <Routes>
         <Route path="/shop" element={<Shop />} />
         <Route path="/contacts" element={<Contacts />} />

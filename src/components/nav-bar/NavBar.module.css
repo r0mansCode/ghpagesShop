@@ -4,7 +4,6 @@
   display: flex;
   box-sizing: border-box;
   padding: 12px 48px;
-  margin-bottom: 24px;
   width: 100%;
   justify-content: space-between;
   background-color: white;
@@ -126,7 +125,11 @@ button:hover {
   backdrop-filter: blur(5px);
 }
 
-@media only screen and (max-width: 600px) {
+.mockLogo {
+  width: 15px;
+}
+
+@media only screen and (max-width: 800px) {
   .cartIconContainer:hover .navBarCartContainer {
     display: none;
   }
@@ -134,8 +137,8 @@ button:hover {
   .container {
     padding: 12px;
   }
-}
 
-.mockLogo {
-  width: 15px;
+  .languageSelector {
+    display: none;
+  }
 }

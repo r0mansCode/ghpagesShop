@@ -121,7 +121,7 @@ export const NavBar = () => {
         <img
           className={classes.languageSelector}
           src={latvianFlag}
-          alt="Shopping Cart"
+          alt="Language"
         />
       </div>
     </div>

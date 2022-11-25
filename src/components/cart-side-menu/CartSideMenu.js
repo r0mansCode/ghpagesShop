@@ -23,7 +23,7 @@ export const CartSideMenu = ({ cart, filteredCart, handleCartClose }) => {
   return (
     <div className={cn.cartSideMenuContainer}>
       <div className={cn.titleRow}>
-        <div className={cn.cartTitle}>Iepirkuma Grozs</div>
+        <div className={cn.cartTitle}>Iepirkumu Grozs</div>
         <FaTimes
           style={{ cursor: "pointer" }}
           onClick={() => handleCartClose()}
@@ -76,9 +76,13 @@ export const CartSideMenu = ({ cart, filteredCart, handleCartClose }) => {
         })}
       </div>
       <div className={cn.totalAmmount}>
-        <NavLink to="/cart">
-          <div onClick={() => handleCartClose()}>Apskatīt Grozu</div>
-        </NavLink>
+        {cart?.length > 0 ? (
+          <NavLink to="/cart">
+            <div onClick={() => handleCartClose()}>Apskatīt Grozu</div>
+          </NavLink>
+        ) : (
+          <div>Iepirkumu grozs ir tukšs</div>
+        )}
         <div>Kopā: €{totalPrice()}</div>
       </div>
     </div>

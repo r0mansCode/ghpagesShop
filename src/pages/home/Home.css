@@ -45,7 +45,7 @@
   list-style-position: inside;
 } */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .compositionPicture {
     display: none;
   }

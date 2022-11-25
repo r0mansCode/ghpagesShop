@@ -4,21 +4,6 @@ import { CiDeliveryTruck } from "react-icons/ci";
 import { GiOrange, GiPresent } from "react-icons/gi";
 
 export const Home = () => {
-  // const src = "https://www.youtube.com/embed/kmxM_JNLmMI";
-  // const src = "https://www.youtube.com/embed/d15DP5zqnYE";
-
-  // const Video = () => {
-  //   return (
-  //     <iframe
-  //       width="560"
-  //       height="315"
-  //       src={src}
-  //       title="Youtube Player"
-  //       frameborder="0"
-  //       allowFullScreen
-  //     />
-  //   );
-  // };
   return (
     <div className="homeContainer">
       <div className="homeTitle">Īsumā Par Mums</div>
@@ -36,14 +21,6 @@ export const Home = () => {
           Aldus PageMaker including versions of Lorem Ipsum.
           <br />
           <br />
-          {/* <iframe
-            width="560"
-            height="315"
-            src={src}
-            title="Youtube Player"
-            frameborder="0"
-            allowFullScreen
-          /> */}
         </div>
       </div>
       <section className="bulletpointSection">
